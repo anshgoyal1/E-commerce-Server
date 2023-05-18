@@ -23,6 +23,10 @@ mongoose
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.log(err));
 
-app.listen(PORT, "0.0.0.0", () => {
+app.get("/", (req, res) => {
+  res.send("Server Working Fine");
+});
+
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
