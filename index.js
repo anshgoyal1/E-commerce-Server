@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const authRouter = require("./routes/auth.js");
 const adminRouter = require("./routes/admin.js");
 const productRouter = require("./routes/product.js");
+const userRouter = require("./routes/user.js");
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(authRouter);
 app.use(adminRouter);
 app.use(productRouter);
+app.use(userRouter);
 
 //connect to db
 mongoose
